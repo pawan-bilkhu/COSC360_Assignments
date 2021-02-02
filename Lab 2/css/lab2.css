@@ -1,0 +1,80 @@
+header, footer{
+    color: white;
+    background-color: #daad86;
+    margin: 0em 4em 0.5em 4em;
+}
+h1, h2, h3, nav, footer{
+    font-family: "Trebuchet MS", "Lucida Grande", Tahoma, sans-serif;
+}
+h1{
+    font-size: 1.5em;
+}
+h2{
+    font-size: 0.75em;
+}
+h3{
+    font-size: 1.125em;
+}
+nav{
+    font-size: 1.125em;
+}
+body{
+    font-family: Georgia, Cambria, "Times New Roman", serif;
+    font-size: 100%;
+    background-color: #98dafc;
+}
+a:link{
+    color: #98dafc;
+    font-weight: bold;
+}
+a:visited{
+    color: #daad86
+}
+a:hover{
+    color: #FFFFCC
+}
+footer, header{
+    background-color: #312c32;
+}
+figure{
+ position: center;
+}
+.large{
+    border: 1px solid gray;
+    width: 98%;
+    margin-right: 0.4em;
+    margin-left: 0.4em;
+    margin-top: 0.4em;
+    padding: 0.25em;
+}
+#container
+{
+    background-color: white;
+    margin: 0em 4em 0.5em 4em;
+    padding: 0.5em;
+}
+#content{
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+#content.h3{
+    border-bottom: 1px solid gray;
+}
+.byline{
+    font-style: italic;
+    color: gray;
+}
+p.byline{
+    padding-top: 0.5em;
+    border-top: 1px solid gray;
+}
+.comments{
+    border-bottom: 1px dotted gray;
+}
+section{
+    margin-bottom: 1em;
+}
+
+footer{
+    padding: 0.5em;
+}
