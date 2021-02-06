@@ -82,7 +82,3 @@ __pycache__/
 # Node Modules
 node_modules/
 
-# Project Specific Exclusions
-*.jpeg
-*.jpg
-images/
