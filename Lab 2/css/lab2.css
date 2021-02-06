@@ -18,6 +18,11 @@ h3{
 nav{
     font-size: 1.125em;
 }
+nav p{
+    padding: 0.25em;
+    display: inline-block;
+
+}
 body{
     font-family: Georgia, Cambria, "Times New Roman", serif;
     font-size: 100%;
@@ -40,17 +45,17 @@ figure{
  position: center;
 }
 .large{
-    border: 1px solid gray;
+    display: block;
+    border: 1px solid black;
     width: 98%;
-    margin-right: 0.4em;
-    margin-left: 0.4em;
-    margin-top: 0.4em;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0.25em;
 }
 #container
 {
     background-color: white;
-    margin: 0em 4em 0.5em 4em;
+    margin: 0 4em 0.5em 4em;
     padding: 0.5em;
 }
 #content{
@@ -58,7 +63,14 @@ figure{
     margin-top: 1em;
 }
 #content.h3{
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid black
+}
+.gradient{
+    border-radius: 25px;
+    border: 1px;
+    width: 100px;
+    height: 50px;
+
 }
 .byline{
     font-style: italic;
@@ -66,15 +78,19 @@ figure{
 }
 p.byline{
     padding-top: 0.5em;
+    padding-bottom: 0.1em;
     border-top: 1px solid gray;
 }
 .comments{
     border-bottom: 1px dotted gray;
 }
-section{
+#review{
     margin-bottom: 1em;
 }
-
+.content-photos{
+    padding-top: 0.5em;
+    border-top: 1px solid gray;
+}
 footer{
     padding: 0.5em;
 }
