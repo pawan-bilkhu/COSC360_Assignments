@@ -60,20 +60,32 @@ figure{
 }
 #content{
     margin-bottom: 1em;
-    margin-top: 1em;
+    margin-top: 2em;
 }
 #content.h3{
     border-bottom: 1px solid black
 }
 .gradient{
-    border-radius: 25px;
-    border: 1px;
-    width: 100px;
+    border-radius: 5px;
+    vertical-align:middle;
+    border: 1px solid gray;
+    background: url(../images/gray-gradient.png) repeat;
     height: 50px;
+    line-height: 50px;
+    width: auto;
 
+}
+.gradient-item{
+    display: inline-block;
+    vertical-align: center;
+    line-height: normal;
+}
+.gradient-item-1{
+    padding-left: 0.5em;
 }
 .byline{
     font-style: italic;
+    padding-bottom: 1em;
     color: gray;
 }
 p.byline{
