@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/lab3.css">
     <title>Lab 3 - Tables and Forms</title>
 </head>
 <body>
@@ -19,56 +20,86 @@
         </div>
 
         <div class="date">
-            <tr class="week-1">
+            <tr class="week">
                 <td></td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
+                <td class ="day">1</td>
+                <td class ="day">2</td>
+                <td class ="day">3</td>
+                <td class ="day">4</td>
+                <td id="today">5</td>
+                <td class ="day">6</td>
             </tr>
-            <tr class="week-2">
-                <td><a href="#">7</a></td>
-                <td>8</td>
-                <td>9</td>
-                <td>10</td>
-                <td>11</td>
-                <td>12</td>
-                <td>13</td>
+            <tr class="week">
+                <td class ="day"><a href="#">7</a></td>
+                <td class ="day">8</td>
+                <td class ="day">9</td>
+                <td class ="day">10</td>
+                <td class ="day">11</td>
+                <td class ="day">12</td>
+                <td class ="day">13</td>
             </tr>
-            <tr class="week-3">
-                <td><a href="#">14</a></td>
-                <td>15</td>
-                <td>16</td>
-                <td>17</td>
-                <td>18</td>
-                <td>19</td>
-                <td>20</td>
+            <tr class="week">
+                <td class ="day"><a href="#">14</a></td>
+                <td class ="day">15</td>
+                <td class ="day">16</td>
+                <td class ="day">17</td>
+                <td class ="day">18</td>
+                <td class ="day">19</td>
+                <td class ="day">20</td>
             </tr>
-            <tr class="week-4">
-                <td><a href="#">21</a></td>
-                <td>22</td>
-                <td>23</td>
-                <td>24</td>
-                <td>25</td>
-                <td>26</td>
-                <td>27</td>
+            <tr class="week">
+                <td class ="day"><a href="#">21</a></td>
+                <td class ="day">22</td>
+                <td class ="day">23</td>
+                <td class ="day">24</td>
+                <td class ="day">25</td>
+                <td class ="day">26</td>
+                <td class ="day">27</td>
             </tr>
-            <tr class="week-5">
-                <td><a href="#">28</a></td>
+            <tr class="week">
+                <td class="day"><a href="#">28</a></td>
+                <td colspan="6"></td>
             </tr>
-            <div class="months">
-                <footer>
-                    <tr>
-                        <td colspan="3" id="prev"><a href="#"><< January</a></td>
-                        <td></td>
-                        <td colspan="3" id="next"><a href="#">March >></a></td>
-                    </tr>
-                </footer>
-            </div>
+        </div>
+        <div class="months">
+            <footer>
+                <tr>
+                    <td colspan="3" id="prev"><a href="#">&#171; January</a></td>
+                    <td></td>
+                    <td colspan="3" id="next"><a href="#">March &#187;</a></td>
+                </tr>
+            </footer>
         </div>
     </table>
+</div>
+
+<div class="meeting">
+    <form method="post" action="http://www.randyconnolly.com/tests/process.php">
+        <fieldset>
+            <legend>Meeting Details</legend>
+            <p>
+                <label>Client Name: </label>
+                <input type="text" name="client" placeholder="Enter name">
+            </p>
+            <p>
+                <label>First meeting? </label>
+                <input type="checkbox" name="first">
+            </p>
+            <p>
+                <label>Client Type</label>
+                <input type="radio" name="type">School
+                <input type="radio" name="type">College
+                <input type="radio" name="type">University
+            </p>
+            <p>
+                <label>Meeting Date:</label>
+                <input type="date" name="date">
+            </p>
+            <p>
+               <button type="submit">Submit</button> <button type="reset">Reset</button>
+            </p>
+        </fieldset>
+    </form>
 </div>
 </body>
 </html>
