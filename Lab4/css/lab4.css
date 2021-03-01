@@ -41,7 +41,7 @@ article{
 }
 .linkbutton{
     float: right;
-    padding-left: 1em;
+    padding: 1em;
     display: block;
     background-color: #ff8800;
     color: white;
@@ -56,18 +56,19 @@ article{
 
 }
 footer{
+    color: #F5F5F5;
+    padding: 1em;
     position: relative;
     clear: left;
-    float: left;
     background-color: #474747;
 }
 .footer-related{
-
     float: left;
     padding: 0em 0em 2em 2em;
 }
 .footer-section{
     margin-left: 30em;
+    padding-right: 1em;
 }
 
 figure{
@@ -89,4 +90,8 @@ figcaption{
     position: absolute;
     top: 0px;
     left: 0px;
+}
+footer h2 {
+    border-top: solid #ff8800 2px;
+    padding-top: 1em;
 }
