@@ -15,12 +15,78 @@ p, body{
 }
 header {
     margin: 2em 5em 2em 5em;
+    border-radius: 0.5em;
+    padding-left: 1em;
     background-color: #F5F5F5;
+    height: 45px;
+    line-height: 45px;
+    vertical-align:middle;
 }
-article#center{
+#center{
+    position: absolute;
+    margin: 2em 5em 5em 20em;
+    padding: 0em 1em 0em 1em;
+}
+article{
+    float: left;
+    background-color: #F5F5F5;
+    overflow-wrap: normal;
+    height: 650px;
+}
+.entry{
+    clear: right;
+    border-top: solid #ff8800 2px;
+    overflow: auto;
 
 }
-article#right-sidebar{
+.linkbutton{
     float: right;
-    margin: 2em 5em 2em;
+    padding-left: 1em;
+    display: block;
+    background-color: #ff8800;
+    color: white;
+}
+#right-sidebar{
+    float: left;
+    margin: 2em 5em 2em 5em;
+    width: 7.5%;
+    padding-left: 1em;
+    padding-right: 2em;
+    padding-top: 0.25em;
+
+}
+footer{
+    position: relative;
+    clear: left;
+    float: left;
+    background-color: #474747;
+}
+.footer-related{
+
+    float: left;
+    padding: 0em 0em 2em 2em;
+}
+.footer-section{
+    margin-left: 30em;
+}
+
+figure{
+    float: left;
+    position: relative;
+}
+figcaption{
+    background-color: black;
+    color: white;
+    opacity: 0.6;
+    width: 140px;
+    height: 20px;
+    padding: 5px;
+    position: absolute;
+    top: 120px;
+    left: 0px
+}
+.overlayed{
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
