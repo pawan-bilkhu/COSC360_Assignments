@@ -26,12 +26,13 @@ header {
     position: absolute;
     margin: 2em 5em 5em 20em;
     padding: 0em 1em 0em 1em;
+    overflow: scroll;
 }
 article{
     float: left;
     background-color: #F5F5F5;
     overflow-wrap: normal;
-    height: 650px;
+    height: 600px;
 }
 .entry{
     clear: right;
