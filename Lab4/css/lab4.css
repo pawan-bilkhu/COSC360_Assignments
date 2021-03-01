@@ -46,6 +46,7 @@ article{
     display: block;
     background-color: #ff8800;
     color: white;
+    text-decoration: none;
 }
 #right-sidebar{
     float: left;
