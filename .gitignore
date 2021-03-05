@@ -70,8 +70,6 @@ fabric.properties
 
 # End of https://www.gitignore.io/api/intellij
 
-### Garry Bilkhu ###
-
 # Python
 __pycache__/
 *.pyc
