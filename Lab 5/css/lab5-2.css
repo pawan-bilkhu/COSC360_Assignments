@@ -60,3 +60,8 @@ fieldset p{
     text-align: left;
     font-size: 75%;
 }
+.hoverNode{
+    border: black solid 1px;
+    color: black;
+    background-color: yellow;
+}
