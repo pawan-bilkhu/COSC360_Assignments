@@ -2,45 +2,45 @@ function setBackgroundColor(e){
     e.style.backgroundColor = "red";
 }
 function removeBackgroundColor(e){
-    e.style.backgroundColor = "black";
+    e.style.backgroundColor = "white";
+
 }
-function highlightField(e){
-    if(e.type=="focus"){
-        e.target.style.backgroundColor = "#FFE393";
-    }
-    if(e.type=="blur"){
+function clearField(e){
         e.target.style.backgroundColor = "white";
-    }
 }
 window.addEventListener("load", function(){
-    var cssSelector = "input[type=text], textarea, ";
+    var cssSelector = "input[type=text], textarea, input[type=checkbox], input[type=color], " +
+        "input[type=time], input[type=date]";
     var fields = document.querySelectorAll(cssSelector);
     for(i=0;i<fields.length; i++)
     {
-        fields[i].addEventListener("focus", highlightField);
-        fields[i].addEventListener("blur", highlightField);
+        fields[i].addEventListener("input", clearField)
     }
 })
-// Trying to use the mainForm to check on submit didn't work, and kept throwing an error
-var mainForm = document.getElementById("mainForm")
 
 window.addEventListener("submit", function(e){
-    var validFrom = true;
-    var cssSelector = "input[type=text], textarea";
+    var validForm = true;
+    var cssSelector = "input[type=text], textarea, input[type=checkbox]";
+    var checkedBox = "input[name=accept]";
+    var checkfield = document.querySelector(checkedBox);
     var fields = document.querySelectorAll(cssSelector);
     for(i=0; i<fields.length;i++)
     {
-        // window.alert(fields[i].value);
-        if (fields[i].value == null || fields[i].value == '')
+
+        if (fields[i].value == null || fields[i].value === '')
         {
             setBackgroundColor(fields[i]);
-            validFrom = false;
+            validForm = false;
         }
         else{
-            setBackgroundColor(fields[i]);
+            removeBackgroundColor(fields[i]);
         }
     }
-    if(!validFrom){
+    if(!checkfield.checked){
+        window.alert("Please accept the software license agreement and fill in any missing fields.");
+        validForm = false;
+    }
+    if(!validForm){
         e.preventDefault();
         return false;
     }

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script href="script/lab5-2.js"></script>
+    <link rel="stylesheet" href="css/lab5-2.css">
+    <title>Lab 3 - Tables and Forms</title>
+</head>
+<body>
+<div class="calendar">
+    <table>
+        <caption>February 2021</caption>
+        <div class="weekdays">
+            <th>S</th>
+            <th>M</th>
+            <th>T</th>
+            <th>W</th>
+            <th>Th</th>
+            <th>F</th>
+            <th>S</th>
+        </div>
+
+        <div class="date">
+            <tr class="week">
+                <td></td>
+                <td class ="day">1</td>
+                <td class ="day">2</td>
+                <td class ="day">3</td>
+                <td class ="day">4</td>
+                <td id="today">5</td>
+                <td class ="day">6</td>
+            </tr>
+            <tr class="week">
+                <td class ="day"><a href="#">7</a></td>
+                <td class ="day">8</td>
+                <td class ="day">9</td>
+                <td class ="day">10</td>
+                <td class ="day">11</td>
+                <td class ="day">12</td>
+                <td class ="day">13</td>
+            </tr>
+            <tr class="week">
+                <td class ="day"><a href="#">14</a></td>
+                <td class ="day">15</td>
+                <td class ="day">16</td>
+                <td class ="day">17</td>
+                <td class ="day">18</td>
+                <td class ="day">19</td>
+                <td class ="day">20</td>
+            </tr>
+            <tr class="week">
+                <td class ="day"><a href="#">21</a></td>
+                <td class ="day">22</td>
+                <td class ="day">23</td>
+                <td class ="day">24</td>
+                <td class ="day">25</td>
+                <td class ="day">26</td>
+                <td class ="day">27</td>
+            </tr>
+            <tr class="week">
+                <td class="day"><a href="#">28</a></td>
+                <td colspan="6"></td>
+            </tr>
+        </div>
+        <div class="months">
+            <footer>
+                <tr>
+                    <td colspan="3" id="prev"><a href="#">&#171; January</a></td>
+                    <td></td>
+                    <td colspan="3" id="next"><a href="#">March &#187;</a></td>
+                </tr>
+            </footer>
+        </div>
+    </table>
+</div>
+
+<div class="meeting">
+    <form method="post" action="http://www.randyconnolly.com/tests/process.php">
+        <fieldset>
+            <legend>Meeting Details</legend>
+            <p>
+                <label>Client Name: </label>
+                <input type="text" name="client" placeholder="Enter name">
+            </p>
+            <p>
+                <label>First meeting? </label>
+                <input type="checkbox" name="first">
+            </p>
+            <p>
+                <label>Client Type</label>
+                <input type="radio" name="type">School
+                <input type="radio" name="type">College
+                <input type="radio" name="type">University
+            </p>
+            <p>
+                <label>Meeting Date:</label>
+                <input type="date" name="date">
+            </p>
+            <p>
+               <button type="submit">Submit</button> <button type="reset">Reset</button>
+            </p>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
