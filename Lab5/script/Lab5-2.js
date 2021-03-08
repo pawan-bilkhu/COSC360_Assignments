@@ -1,5 +1,4 @@
 function childTraverse(entry){
-
         if(entry.hasChildNodes())
         {
             var childNode = entry.childNodes;
@@ -11,20 +10,15 @@ function childTraverse(entry){
                 var text = document.createTextNode(entry.tagName);
                 span.classList.add("hoverNode");
                 span.append(text);
-                span.addEventListener("click", function(event){
-                    window.alert("Node name: " + span.innerHTML)
+                span.addEventListener("click", function(){
+                    window.alert("innerHTML: " + entry.innerHTML + "\nID: " + entry.nodeName)
                 });
-                console.log(entry);
+
+                // console.log(entry);
                 entry.appendChild(span);
         }
-
-
-
 }
 window.addEventListener("load", function(e){
     var elements = document.body.childNodes;
-    elements.forEach(function (entry){
-        childTraverse(entry)
-
-    })
+    elements.forEach(childTraverse);
 });

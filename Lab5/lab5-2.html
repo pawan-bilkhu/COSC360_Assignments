@@ -7,20 +7,25 @@
     <title>Lab 5-2 - Tables and Forms</title>
 </head>
 <body>
-<div class="calendar">
     <table>
         <caption>February 2021</caption>
-        <div class="weekdays">
-            <th>S</th>
-            <th>M</th>
-            <th>T</th>
-            <th>W</th>
-            <th>Th</th>
-            <th>F</th>
-            <th>S</th>
-        </div>
-
-        <div class="date">
+            <thead>
+                <th>S</th>
+                <th>M</th>
+                <th>T</th>
+                <th>W</th>
+                <th>Th</th>
+                <th>F</th>
+                <th>S</th>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="3" id="prev"><a href="#">&#171; January</a></td>
+                    <td></td>
+                    <td colspan="3" id="next"><a href="#">March &#187;</a></td>
+                </tr>
+            </tfoot>
+        <tbody>
             <tr class="week">
                 <td></td>
                 <td class ="day">1</td>
@@ -61,21 +66,10 @@
                 <td class="day"><a href="#">28</a></td>
                 <td colspan="6"></td>
             </tr>
-        </div>
-        <div class="months">
-            <footer>
-                <tr>
-                    <td colspan="3" id="prev"><a href="#">&#171; January</a></td>
-                    <td></td>
-                    <td colspan="3" id="next"><a href="#">March &#187;</a></td>
-                </tr>
-            </footer>
-        </div>
+        </tbody>
     </table>
-</div>
-
-<div class="meeting">
-    <form method="post" action="http://www.randyconnolly.com/tests/process.php">
+<form method="post" action="http://www.randyconnolly.com/tests/process.php">
+    <div class="meeting">
         <fieldset>
             <legend>Meeting Details</legend>
             <p>
@@ -100,7 +94,7 @@
                <button type="submit">Submit</button> <button type="reset">Reset</button>
             </p>
         </fieldset>
-    </form>
-</div>
+    </div>
+</form>
 </body>
 </html>
