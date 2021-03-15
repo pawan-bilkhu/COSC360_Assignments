@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
@@ -11,7 +12,10 @@
   <p id="time_two"></p>
 
   <!-- Add button and table here -->
-
+  <table id="cities">
+    <tr id="header"></tr>
+  </table>
+  <button name="getCityInfo" onclick="retrieveInfo()">Get City Info</button>
   <script>
   //set interval timers to trigger the refresh.  Here the callback function will
   //be called when the timer fires
@@ -34,16 +38,35 @@
   function timer2() {
       var results = $.get("http://time.jsontest.com/");
       results.done(function(data) {
-                            console.log(data);
+                            // console.log(data);
                             //Vanilla JS
                             //document.getElementById("time_two").innerHTML = data.time;
                             //jQuery
                             $("#time_two").html("Remote server time: " + data.time);
                               });
       results.fail(function(jqXHR) {console.log("Error: " + jqXHR.status);});
-      results.always(function() {console.log("done");});
+      // results.always(function() {console.log("done");});
 
 
+  }
+  function retrieveInfo(){
+    var json = $.get("http://www.randyconnolly.com/funwebdev/services/travel/cities.php");
+    var header = "<th>Name</th><th>ISO</th><th>Latitude</th><th>Longitude</th><th>Population</th><th>Elevation</th>";
+    var tableHeader = $('#header');
+    tableHeader.html(header);
+    var tablebody = $('#cities>tbody');
+    json.done(function(data){
+      data.forEach(function (item){
+        var name = "<td>" + item.name +"</td>";
+        var iso = "<td>" + item.iso +"</td>";
+        var latitude = "<td>" + item.latitude +"</td>";
+        var longitude = "<td>" + item.longitude +"</td>";
+        var population = "<td>" + item.population +"</td>";
+        var elevation = "<td>" + item.elevation +"</td>";
+        var row = "<tr>" + name + iso + latitude + longitude + population + elevation + "</tr>";
+        tablebody.append(row);
+        });
+      });
   }
   </script>
 
