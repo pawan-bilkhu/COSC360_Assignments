@@ -13,9 +13,11 @@
 
   <!-- Add button and table here -->
   <table id="cities">
-    <tr id="header"></tr>
+    <tbody>
+
+    </tbody>
   </table>
-  <button name="getCityInfo" onclick="retrieveInfo()">Get City Info</button>
+  <button id="" onclick="retrieveInfo()">Get City Info</button>
   <script>
   //set interval timers to trigger the refresh.  Here the callback function will
   //be called when the timer fires
@@ -50,23 +52,34 @@
 
   }
   function retrieveInfo(){
-    var json = $.get("http://www.randyconnolly.com/funwebdev/services/travel/cities.php");
-    var header = "<th>Name</th><th>ISO</th><th>Latitude</th><th>Longitude</th><th>Population</th><th>Elevation</th>";
-    var tableHeader = $('#header');
-    tableHeader.html(header);
-    var tablebody = $('#cities>tbody');
-    json.done(function(data){
-      data.forEach(function (item){
-        var name = "<td>" + item.name +"</td>";
-        var iso = "<td>" + item.iso +"</td>";
-        var latitude = "<td>" + item.latitude +"</td>";
-        var longitude = "<td>" + item.longitude +"</td>";
-        var population = "<td>" + item.population +"</td>";
-        var elevation = "<td>" + item.elevation +"</td>";
-        var row = "<tr>" + name + iso + latitude + longitude + population + elevation + "</tr>";
-        tablebody.append(row);
+    var tableBody = $('#cities>tbody');
+    var button = $('button')
+    if(button.attr('id') === "") {
+      var jsonList = $.get("http://www.randyconnolly.com/funwebdev/services/travel/cities.php");
+      var header = "<tr><th>Name</th><th>ISO</th><th>Latitude</th><th>Longitude</th><th>Population</th><th>Elevation</th></tr>";
+      tableBody.append(header);
+
+      jsonList.done(function (data) {
+        data.forEach(function (item) {
+          var name = "<td>" + item.name + "</td>";
+          var iso = "<td>" + item.iso + "</td>";
+          var latitude = "<td>" + item.latitude + "</td>";
+          var longitude = "<td>" + item.longitude + "</td>";
+          var population = "<td>" + item.population + "</td>";
+          var elevation = "<td>" + item.elevation + "</td>";
+          var row = "<tr>" + name + iso + latitude + longitude + population + elevation + "</tr>";
+          tableBody.append(row);
+        });
+
+        button.attr("id", "clicked");
+        jsonList.fail(function (jqXHR) {
+          console.log("Error: " + jqXHR.status);
+        });
+        jsonList.always(function () {
+          console.log("done");
         });
       });
+    }
   }
   </script>
 
