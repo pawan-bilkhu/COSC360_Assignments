@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript" src="scripts/validate.js"></script>
+
+<!-- Password checking script here! -->
+  <script>
+    function checkPasswordMatch(e)
+    {
+      var password = document.getElementById('password');
+      var passwordCheck = document.getElementById('password-check');
+
+      // console.log(password.value !== passwordCheck.value)
+      if (password.value !== passwordCheck.value)
+      {
+        // console.log("passwords don't match!");
+        alert("Passwords do not match!");
+        makeRed(password);
+        makeRed(passwordCheck);
+        e.preventDefault();
+      }
+
+    }
+  </script>
+
+</head>
+
+<body>
+
+<form method="POST" action="changepassword.php" id="mainForm" >
+  Username:<br>
+  <input type="text" name="username" id="username" class="required">
+  <br>
+  Old Password:<br>
+  <input type="password" name="oldpassword" id="oldpassword" class="required">
+  <br><br>
+  New Password:<br>
+  <input type="password" name="newpassword" id="password" class="required">
+  <br>
+  Re-enter New Password:<br>
+  <input type="password" name="newpassword-check" id="password-check" class="required">
+  <br><br>
+  <input type="submit" value="Update Password">
+</form>
+</body>
